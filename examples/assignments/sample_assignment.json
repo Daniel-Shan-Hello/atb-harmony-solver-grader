@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "type": "assignment",
+  "key": ["C", "major"],
+  "studentCanGrade": true,
+  "assignmentName": "Phrase 1 in C major",
+  "studentName": "",
+  "measures": [
+    {
+      "S": null,
+      "A": null,
+      "T": null,
+      "B": [48, "C", 0],
+      "romanNumeral": "I",
+      "cadence": ""
+    },
+    {
+      "S": null,
+      "A": null,
+      "T": null,
+      "B": null,
+      "romanNumeral": "V",
+      "cadence": ""
+    },
+    {
+      "S": null,
+      "A": null,
+      "T": null,
+      "B": null,
+      "romanNumeral": "I",
+      "cadence": "PAC"
+    }
+  ],
+  "fixedNotes": [[0, "B"]]
+}

@@ -1,0 +1,20 @@
+/* ===== Student-specific styles ===== */
+
+/* Role badge — student green */
+.role-badge {
+    background: #00b894;
+    color: #fff;
+}
+
+/* Read-only key display in the toolbar (the student can't change keys) */
+.key-display-readonly {
+    padding: 6px 10px;
+    background: #f0f0f5;
+    border-radius: 6px;
+    color: #2d3436;
+    font-size: 14px;
+    font-weight: 700;
+    user-select: none;
+    min-width: 90px;
+    text-align: center;
+}

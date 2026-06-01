@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "type": "submission",
+  "key": ["C", "major"],
+  "studentCanGrade": true,
+  "assignmentName": "Phrase 1 in C major",
+  "studentName": "Student A",
+  "measures": [
+    {
+      "S": [72, "C", 0],
+      "A": [64, "E", 0],
+      "T": [55, "G", 0],
+      "B": [48, "C", 0],
+      "romanNumeral": "I",
+      "cadence": ""
+    },
+    {
+      "S": [71, "B", 0],
+      "A": [62, "D", 0],
+      "T": [55, "G", 0],
+      "B": [43, "G", 0],
+      "romanNumeral": "V",
+      "cadence": ""
+    },
+    {
+      "S": [72, "C", 0],
+      "A": [64, "E", 0],
+      "T": [55, "G", 0],
+      "B": [48, "C", 0],
+      "romanNumeral": "I",
+      "cadence": "PAC"
+    }
+  ],
+  "fixedNotes": []
+}

@@ -1,0 +1,149 @@
+/* ===== Teacher-specific styles ===== */
+
+/* Role badge — teacher purple */
+.role-badge {
+    background: #6c5ce7;
+    color: #fff;
+}
+
+/* Key signature controls */
+.key-btn {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #b2bec3;
+    border-radius: 6px;
+    background: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.key-btn:hover {
+    background: #dfe6e9;
+}
+
+#key-display {
+    font-size: 15px;
+    font-weight: 700;
+    min-width: 90px;
+    text-align: center;
+    user-select: none;
+}
+
+.mode-btn {
+    padding: 6px 14px;
+    border: 1px solid #b2bec3;
+    border-radius: 6px;
+    background: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.mode-btn:hover {
+    background: #dfe6e9;
+}
+
+/* Fix button */
+.fix-btn {
+    padding: 6px 14px;
+    border: 1px solid #b2bec3;
+    border-radius: 6px;
+    background: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.fix-btn:hover {
+    background: #dfe6e9;
+}
+
+.fix-btn.fixed {
+    background: #636e72;
+    color: #fff;
+    border-color: #636e72;
+}
+
+.fix-btn:disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+
+/* Solve button */
+.solve-btn {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 6px;
+    background: #2d3436;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.solve-btn:hover {
+    background: #0f1112;
+}
+
+.solve-btn:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+/* Export-confirm modal */
+.export-confirm-content {
+    width: 460px;
+    max-width: 90vw;
+}
+
+.export-confirm-question {
+    font-size: 15px;
+    color: #2d3436;
+    line-height: 1.55;
+    padding: 6px 4px 18px;
+}
+
+.export-confirm-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    border-top: 1px solid #ecf0f3;
+    padding-top: 14px;
+}
+
+.export-allow-btn,
+.export-deny-btn {
+    padding: 8px 22px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.export-allow-btn {
+    background: #00b894;
+    color: #fff;
+}
+
+.export-allow-btn:hover {
+    background: #00a381;
+}
+
+.export-deny-btn {
+    background: #dfe6e9;
+    color: #2d3436;
+}
+
+.export-deny-btn:hover {
+    background: #c8d2d6;
+}

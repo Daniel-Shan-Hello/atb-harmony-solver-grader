@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SATB Harmony Grader · Teacher</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='shared/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='teacher/teacher.css') }}">
+</head>
+<body>
+    <!-- Toolbar -->
+    <div id="toolbar">
+        <div class="toolbar-group">
+            <span id="role-badge" class="role-badge"></span>
+        </div>
+        <div class="toolbar-group">
+            <span id="label-voice" class="toolbar-label">声部：</span>
+            <button class="voice-btn active" data-voice="S">S</button>
+            <button class="voice-btn" data-voice="A">A</button>
+            <button class="voice-btn" data-voice="T">T</button>
+            <button class="voice-btn" data-voice="B">B</button>
+            <button id="eraser-btn" class="eraser-btn" title="橡皮擦：点击音符删除">⌫</button>
+        </div>
+        <div class="toolbar-group">
+            <span id="label-key" class="toolbar-label">调性：</span>
+            <button id="key-down" class="key-btn" title="减少升号 / 增加降号">&#x2212;</button>
+            <span id="key-display">C Major</span>
+            <button id="key-up" class="key-btn" title="增加升号 / 减少降号">+</button>
+            <button id="toggle-mode" class="mode-btn" title="切换大小调">大/小调</button>
+        </div>
+        <div class="toolbar-group">
+            <span id="label-acc" class="toolbar-label">临时记号：</span>
+            <button id="acc-down" class="acc-btn" title="降半音 (最多重降)">&#x266d;</button>
+            <span id="acc-display">♮</span>
+            <button id="acc-up" class="acc-btn" title="升半音 (最多重升)">&#x266f;</button>
+        </div>
+        <div class="toolbar-group">
+            <button id="fix-btn" class="fix-btn" title="标记为固定音符">Fix</button>
+        </div>
+        <div class="toolbar-spacer"></div>
+        <div class="toolbar-group">
+            <button id="play-btn" class="play-btn">▶ Play</button>
+            <button id="import-btn" class="import-btn">Import JSON</button>
+            <button id="export-btn" class="export-btn">Export JSON</button>
+            <button id="grade-btn" class="grade-btn">Voice Grader</button>
+            <button id="solve-btn" class="solve-btn">Solve</button>
+            <button id="lang-btn" class="lang-btn">EN</button>
+        </div>
+    </div>
+
+    <!-- Hidden file input for JSON import -->
+    <input type="file" id="import-file" accept=".json,application/json" style="display:none;">
+
+    <!-- Meta bar: assignment name (teacher editable) + student name (read-only after import) -->
+    <div id="meta-bar" class="meta-bar">
+        <div class="meta-field" id="assignment-name-field">
+            <label for="assignment-name-input" class="meta-label">作业名称：</label>
+            <input type="text" id="assignment-name-input" class="meta-input"
+                   placeholder="未命名作业" maxlength="80">
+        </div>
+        <div class="meta-field" id="student-name-field" style="display:none;">
+            <label for="student-name-input" class="meta-label">学生姓名：</label>
+            <input type="text" id="student-name-input" class="meta-input"
+                   placeholder="未填写" maxlength="40">
+        </div>
+    </div>
+
+    <!-- Score area -->
+    <div id="score-wrapper">
+        <div id="score-container"></div>
+        <div id="controls-overlay"></div>
+        <div id="roman-numeral-container"></div>
+    </div>
+
+    <!-- Toast -->
+    <div id="toast" class="toast" style="display:none;"></div>
+
+    <!-- Export confirm modal: grader permission for students -->
+    <div id="export-confirm-modal" class="modal-overlay" style="display:none;">
+        <div class="modal-content export-confirm-content">
+            <div class="modal-header">
+                <h3 id="export-confirm-title">导出作业</h3>
+                <button id="export-confirm-close" class="modal-close-btn">&times;</button>
+            </div>
+            <p id="export-confirm-question" class="export-confirm-question">
+                此作业学生是否拥有 Grader（自检）权限？
+            </p>
+            <div class="export-confirm-actions">
+                <button id="export-deny-btn" class="export-deny-btn">不允许</button>
+                <button id="export-allow-btn" class="export-allow-btn">允许</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Grader results modal -->
+    <div id="grade-modal" class="modal-overlay" style="display:none;">
+        <div class="modal-content grade-modal-content">
+            <div class="modal-header">
+                <h3>Voice Grader 结果</h3>
+                <button id="grade-modal-close" class="modal-close-btn">&times;</button>
+            </div>
+            <div id="grade-results"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='vendor/soundfont-player.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/vexflow.js') }}"></script>
+    <script src="{{ url_for('static', filename='shared/music.js') }}"></script>
+    <script src="{{ url_for('static', filename='shared/io.js') }}"></script>
+    <script src="{{ url_for('static', filename='shared/playback.js') }}"></script>
+    <script src="{{ url_for('static', filename='shared/score.js') }}"></script>
+    <script src="{{ url_for('static', filename='shared/grader.js') }}"></script>
+    <script src="{{ url_for('static', filename='teacher/teacher.js') }}"></script>
+</body>
+</html>
