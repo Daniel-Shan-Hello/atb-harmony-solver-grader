@@ -44,9 +44,13 @@ Three chord types have non-standard syntax:
 
 Format: `base/target`. The base can be any standard chord; the target follows these restrictions:
 
-- Quality must be `maj`, `min`, or `dom` — so no diminished, half-diminished, augmented, Neapolitan, or augmented-sixth targets
+Format: `base/target`. The base can be any standard chord; the target follows these restrictions:
+
+- Quality must be `maj`, `min`, or `dom` — so no diminished, half-diminished, augmented, or augmented-sixth targets
 - Cannot be a seventh chord (`V/V7` is invalid)
 - Nested secondaries (`V/V/V`) are not supported
+
+The **Neapolitan** is supported as a secondary target: `V/bII`, `V7/bII`, and `viio7/bII` all resolve correctly, treating bII as a temporary tonic raised by a semitone. This enables progressions like `V7/bII → bII6 → ...`.
 
 Typical bases are dominants (`V`, `V7` and inversions) and secondary leading-tone chords (`vii°`, `vii°7`, `viiø7` and inversions). Typical targets are `ii`, `iii`, `IV`, `V`, `vi`, and the modal-mixture chords `bIII`, `bVI`.
 
