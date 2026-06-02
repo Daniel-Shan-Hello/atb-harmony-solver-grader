@@ -44,8 +44,6 @@ Three chord types have non-standard syntax:
 
 Format: `base/target`. The base can be any standard chord; the target follows these restrictions:
 
-Format: `base/target`. The base can be any standard chord; the target follows these restrictions:
-
 - Quality must be `maj`, `min`, or `dom` — so no diminished, half-diminished, augmented, or augmented-sixth targets
 - Cannot be a seventh chord (`V/V7` is invalid)
 - Nested secondaries (`V/V/V`) are not supported
